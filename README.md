@@ -7,6 +7,10 @@ Primeira coisa configurar os pacotes que ficam no repositório:
 vim /etc/apt/sources.list
 '''
 
+'''
+teste
+'''
+
 Atualizei os pacotes com o comando conhecido
 
 '''
