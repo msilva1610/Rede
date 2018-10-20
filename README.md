@@ -78,3 +78,9 @@ ssh-keygen -t rsa
 '''
 ip a
 '''
+
+## Configurando as interfaces de rede
+
+```
+teste
+```
