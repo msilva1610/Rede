@@ -231,3 +231,54 @@ iface bond0 inet static
 #VAGRANT-END
 
 ´´´
+# Configurar o Iptables do servidor firewall
+
+Listar o iptables default
+
+´´´
+iptables -t filter -nvL
+´´´
+
+Resultado:
+´´´
+vagrant@firewall:~$ sudo iptables -t filter -nvL
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+
+´´´
+
+Executando comando ping para saber se o servidor de firewall tem ou não saída para internet
+ping no dns de servidor do google
+´´´
+ping 8.8.8.8
+´´´
+Resultado:
+´´´
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=165 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=118 time=233 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=118 time=12.1 ms
+´´´
+## Saída para internet
+
+Após configurar o scrit firewall
+
+ver o status antes de executar as configurações para saída intenert
+
+´´´
+sysctl net.ipv4.ip_forward
+´´´
+Reiniciar o serviço
+´´´
+systemctl restart firewall.service 
+´´´
+
+Ver o conteúdo da tabela nat
+´´´
+iptables -t nat -nvL
+´´´
