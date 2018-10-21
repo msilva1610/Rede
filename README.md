@@ -6,6 +6,13 @@ Primeira coisa configurar os pacotes que ficam no repositório:
 ```
 vim /etc/apt/sources.list
 ```
+<<<<<<< HEAD
+=======
+
+```
+teste
+```
+>>>>>>> e8a4debf32a1aa18a688f40e75b02bf4e7a7c89d
 
 Atualizei os pacotes com o comando conhecido
 
