@@ -7,6 +7,7 @@ Server-DNS-Slave-e-E-mail.ova.zip
 Server-Samba.ova.zip
 Server-WEB-e-FTP.ova.zip
 .vagrant
+share
 curso_ubuntu_id_rsa
 curso_ubuntu_id_rsa.pub
 ubuntu-xenial-16.04-cloudimg-console.log
